@@ -14,7 +14,7 @@ A high-performance, agentic AI search engine clone built with a premium "Stellar
 
 - **Frontend**: React, Tailwind CSS, Framer Motion, Axios, React-Markdown.
 - **Backend**: Node.js, Express, MongoDB, Redis, LangChain, LangGraph.
-- **AI Models**: Google Gemini 1.5 Flash, Mistral AI.
+- **AI Models**: Google Gemini 2.5 Flash, Mistral AI.
 - **Search API**: Tavily Search.
 
 ## ⚠️ Important Note on API Usage
@@ -32,7 +32,7 @@ A high-performance, agentic AI search engine clone built with a premium "Stellar
 
 1. **Clone the repository**:
    ```bash
-   git clone [your-repo-link]
+   git clone https://github.com/Samarth0802/Perplexity.git
    ```
 
 2. **Backend Setup**:
@@ -44,5 +44,4 @@ A high-performance, agentic AI search engine clone built with a premium "Stellar
    - Navigate to `/Frontend`.
    - Run `npm install` then `npm run dev`.
 
-## 📜 License
-MIT License
+
