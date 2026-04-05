@@ -52,7 +52,7 @@ System configuration is split between the Backend and Frontend. You **must** cre
 | `REDIS_PORT` | Redis server port. | `6379` |
 | `REDIS_PASSWORD` | Redis server password (if any). | Required for Managed Redis. |
 | **AI API Keys** | | |
-| `GOOGLE_API_KEY` | API Key for Gemini 1.5 Flash. | Get it from [Google AI Studio](https://aistudio.google.com/). |
+| `GOOGLE_API_KEY` | API Key for Gemini 1.5 Flash. | Get it from [Google AI Studio](https://a studio.google.com/). |
 | `MISTRAL_API_KEY`| API Key for Mistral models. | Get it from [Mistral Console](https://console.mistral.ai/). |
 | `TAVILY_API_KEY` | API Key for Web Search capabilities. | Get it from [Tavily](https://tavily.com/). |
 | **Email (OTP)** | | |
@@ -73,8 +73,8 @@ System configuration is split between the Backend and Frontend. You **must** cre
 
 1. **Clone the repository**:
    ```bash
-   git clone [your-repo-link]
-   cd Perplexity-Clone
+   git clone https://github.com/Samarth0802/Perplexity.git
+   cd Perplexity
    ```
 
 2. **Backend Setup**:
