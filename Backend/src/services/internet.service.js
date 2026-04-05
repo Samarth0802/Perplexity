@@ -26,7 +26,7 @@ const internetSearch = tool(
 console.log("🤖 Initializing Gemini Model...");
 const googleModel = new ChatGoogleGenerativeAI({
     apiKey: process.env.GOOGLE_API_KEY,
-    model: "gemini-1.5-flash",
+    model: "gemini-2.5-flash",
     maxOutputTokens: 2048,
 })
 console.log("✅ Model Initialized");
