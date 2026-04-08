@@ -19,6 +19,11 @@ export async function generateTitle(message) {
     return response.content;
   } catch (error) {
     console.error("Mistral Title Error:", error);
+    if (error.message?.toLowerCase().includes("api key") || 
+        error.message?.toLowerCase().includes("unauthorized") || 
+        error.message?.toLowerCase().includes("quota")) {
+      return "API_KEY_ERROR"; 
+    }
     return "New Thread"; // Fallback title
   }
 }
@@ -54,6 +59,14 @@ export async function generateReponse(messages){
     return content;
   } catch (error) {
     console.error("Agent Response Error:", error);
+    if (error.message?.toLowerCase().includes("api key") || 
+        error.message?.toLowerCase().includes("unauthorized") || 
+        error.message?.toLowerCase().includes("quota") ||
+        error.status === 401 || error.status === 403 || error.status === 429) {
+      const apiKeyError = new Error("API_KEY_EXHAUSTED");
+      apiKeyError.statusCode = 403;
+      throw apiKeyError;
+    }
     throw error;
   }
 }

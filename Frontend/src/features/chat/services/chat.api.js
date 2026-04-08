@@ -5,6 +5,16 @@ const api = axios.create({
     withCredentials: true
 })
 
+api.interceptors.response.use(
+    (response) => response,
+    (error) => {
+        if (error.response?.status === 403 && error.response?.data?.message === "API_KEY_EXHAUSTED") {
+            window.dispatchEvent(new Event('api-key-exhausted'));
+        }
+        return Promise.reject(error);
+    }
+);
+
 export const sendMessage = async (message,chatId) => {
     const response = await api.post('/api/chat/message',{message,chatId})
     return response.data
